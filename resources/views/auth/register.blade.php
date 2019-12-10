@@ -74,4 +74,8 @@
         </div>
     </div>
 </div>
+@section('scripts')
+<script src="{{asset('resources/js/jquery.min.js')}}"></script>
+<script src="{{asset('resources/js/register.js')}}"></script>
+@endsection
 @endsection

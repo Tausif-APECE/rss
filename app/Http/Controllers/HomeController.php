@@ -60,4 +60,9 @@ class HomeController extends Controller
         return view('feed_list',compact('finalResult'));
     }
 
+    public function checkEmail(Request $request)
+    {
+      $email = $request->email;
+    }
+
 }

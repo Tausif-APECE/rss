@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'RSS Feed Reader') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('/resources/js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -20,6 +17,7 @@
     <link href="{{ asset('/resources/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+  <input type="hidden" id="PublicPath" value="<?php echo url('/');?>">
 <div id="app">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -79,5 +77,8 @@
 
     @yield('content')
 </div>
+<!-- Scripts -->
+<script src="{{ asset('/resources/js/app.js') }}" defer></script>
+@yield('scripts')
 </body>
 </html>
