@@ -18,4 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('check-email','HomeController@checkEmail');
+Route::get('check-email','EmailcheckingController@checkEmail');

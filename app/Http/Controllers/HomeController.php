@@ -17,9 +17,9 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the feed most frequently used word list and their respective counts.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -60,9 +60,5 @@ class HomeController extends Controller
         return view('feed_list',compact('finalResult'));
     }
 
-    public function checkEmail(Request $request)
-    {
-      $email = $request->email;
-    }
 
 }
